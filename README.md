@@ -27,16 +27,15 @@
  ```
    
 ### Wireframes:
-    
-    The proposed layout and design of your app. Create mockups for your views. If your are creating multiple views including both desktop and mobile formats, and consider whether or not you need to account for landscape and portrait orientations. Please use a digital tool to complete your wireframe.
+[Wireframe] (https://www.figma.com/file/P6JKDp5DQmXtHlwuGyfTKi/Untitled?node-id=0%3A1) 
     
 ### MVP:
-    
-    A list of features you will need to build in order to meet the Minimum Viable Product. This will be the rubric your project will be graded against.
+
+    - compare answer against actual answer
     
 ### Post-MVP: 
     
-    A list of additional/advanced features you would like to include in your app after you have met MVP.
+    - Kanye guru score guauge
     
 ### Goals:
     
