@@ -39,5 +39,4 @@
     
 ### Goals:
     
-    What you plan to accomplish for each day of the project week.
-    Timeframes: How long you anticipate spending on each area of development. Be sure to consider how many hours a day you plan to be coding and how many days you have available until presentation day. Components should be broken down into a maximum of 3 hours time blocks.
+    I first plan on building on rough website. Second I will fetch the API data and manipulate the DOM accordingly.
