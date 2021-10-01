@@ -14,9 +14,12 @@
    Philosophy Quotes API: https://github.com/KaranDahiya/philosophy-quotes-API
     
 ### API Snippet:
-    
+   Kanye West Result Snippet 
  ``` 
- kayne.rest API: {"quote":"We came into a broken world. And we're the cleanup crew."} 
+{
+    "quote": "Keep your nose out the sky, keep your heart to god, and keep your face to the rising sun."
+}
+
  ``` 
  
  ``` 
