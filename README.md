@@ -14,16 +14,16 @@
    Philosophy Quotes API: https://github.com/KaranDahiya/philosophy-quotes-API
     
 ### API Snippet:
-   Kanye West Result Snippet 
+   Kayne.rest API Result Snippet 
  ``` 
 {
     "quote": "Keep your nose out the sky, keep your heart to god, and keep your face to the rising sun."
 }
 
  ``` 
- 
+ Philosophy Quotes API Result Snippet:
  ``` 
- Philosophy Quotes API: {"source":"René Descartes","philosophy":"Rationalism","quote":"Except our own thoughts, there is nothing absolutely in our power.","_id":"0lyE9hLpz9QbCDgs"}
+ {"source":"René Descartes","philosophy":"Rationalism","quote":"Except our own thoughts, there is nothing absolutely in our power.","_id":"0lyE9hLpz9QbCDgs"}
  ```
    
 ### Wireframes:
