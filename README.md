@@ -15,8 +15,13 @@
     
 ### API Snippet:
     
-   kayne.rest API: {"quote":"We came into a broken world. And we're the cleanup crew."}
-   Philosophy Quotes API: {"source":"René Descartes","philosophy":"Rationalism","quote":"Except our own thoughts, there is nothing absolutely in our power.","_id":"0lyE9hLpz9QbCDgs"}
+ ``` 
+ kayne.rest API: {"quote":"We came into a broken world. And we're the cleanup crew."} 
+ ``` 
+ 
+ ``` 
+ Philosophy Quotes API: {"source":"René Descartes","philosophy":"Rationalism","quote":"Except our own thoughts, there is nothing absolutely in our power.","_id":"0lyE9hLpz9QbCDgs"}
+ ```
    
 ### Wireframes:
     
