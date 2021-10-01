@@ -14,7 +14,7 @@
    Philosophy Quotes API: https://github.com/KaranDahiya/philosophy-quotes-API
     
 ### API Snippet:
-   Kayne.rest API Result Snippet 
+   Kayne.rest API Result Snippet: 
  ``` 
 {
     "quote": "Keep your nose out the sky, keep your heart to god, and keep your face to the rising sun."
