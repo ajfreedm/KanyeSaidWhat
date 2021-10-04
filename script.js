@@ -12,11 +12,11 @@ function getAnswer(data) {
 
   if (actualAnswer == answer) {
     console.log("win");
-    result.innerText = "You answer is correct";
+    result.innerText = "You got that one right!";
     
   } else {
     console.log("lose");
-    result.innerText = "Your answer is incorrect. Try again";
+    result.innerText = "You got that one wrong";
   }
 
   randomFunc[Math.floor(Math.random() * randomFunc.length)]();
@@ -50,7 +50,7 @@ function getFamousQuote() {
     .then((response) => response.json())
     .then((famousData) => {
      quotesDiv.innerText = famousData[Math.floor(Math.random() * 1000)].author;
-     quotesDiv.innerText = famousData[Math.floor(Math.random() * 1000)].text;
-      //quotesDiv.setAttribute("id", "no");
+     //quotesDiv.innerText = famousData[Math.floor(Math.random() * 1000)].text;
+     quotesDiv.setAttribute("id", "no");
     });
 }
