@@ -6,7 +6,7 @@ function getAnswer(data) {
   answer = data.currentTarget.value;
   console.log(answer);
 
-
+ 
  
 
 }
@@ -31,8 +31,8 @@ function getFamousQuote() {
   fetch("https://type.fit/api/quotes")
     .then((response) => response.json())
     .then((famousData) => {
-      //quotesDiv.innerText = famousData[Math.floor(Math.random() * 1000)].author;
-      quotesDiv.innerText = famousData[Math.floor(Math.random() * 1000)].text;
+      quotesDiv.innerText = famousData[Math.floor(Math.random() * 1000)].author;
+      //quotesDiv.innerText = famousData[Math.floor(Math.random() * 1000)].text;
     
     });
 }
