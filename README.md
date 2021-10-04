@@ -6,12 +6,12 @@
     
 ### App Description:
    
-    The app will display a randomized quote taken either from kanye.rest API or Philosophy Quotes API. The end user will have to answer the question using a button if they think the quote is from Kayne West or a famous philospher.
+    The app will display a randomized quote taken either from kanye.rest API from the famous quote API. The end user will have to answer the question using a button if they think the quote is from Kayne West or a some other famous person.
     
 ### API: 
     
    Kayne.rest API: https://kanye.rest/
-   Philosophy Quotes API: https://github.com/KaranDahiya/philosophy-quotes-API
+   Famous Quotes API: https://type.fit/api/quotes
     
 ### API Snippet:
    Kayne.rest API Result Snippet: 
@@ -21,17 +21,22 @@
 }
 
  ``` 
- Philosophy Quotes API Result Snippet:
+  Type.fit API Result Snippet:
  ``` 
- {"source":"René Descartes","philosophy":"Rationalism","quote":"Except our own thoughts, there is nothing absolutely in our power.","_id":"0lyE9hLpz9QbCDgs"}
+{
+    "text": "Genius is one percent inspiration and ninety-nine percent perspiration.",
+    "author": "Thomas Edison"
+}
  ```
    
 ### Wireframes:
 [Wireframe] (https://www.figma.com/file/P6JKDp5DQmXtHlwuGyfTKi/Untitled?node-id=0%3A1) 
     
 ### MVP:
-
-    - compare answer against actual answer
+    - Display a random quote to the end user
+    - User must read the quote and determine if it is a quote from Kayne West or another famous person
+    - If the user answer correctly he will be displayed another quote
+    - If the user answers incorrectly, he will be displayed the correct author and will be displayed another quote to try again
     
 ### Post-MVP: 
     
