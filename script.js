@@ -17,7 +17,7 @@ function getAnswer(data) {
     
   } else {
     console.log("lose");
-    result.innerText = "You got that one wrong, try again";
+    result.innerHTML = `You got that one wrong, try again <span style="text-decoration: underline;"><a href="https://en.wikipedia.org/wiki/Special:Search?search=${randomQuoteAuthor}">${randomQuoteAuthor}</a></span> said that` ;
     result.style.color = "red";
   }
 
@@ -52,8 +52,11 @@ function getFamousQuote() {
     .then((response) => response.json())
     .then((famousData) => {
      //quotesDiv.innerText = famousData[Math.floor(Math.random() * 1000)].author;
-     randomQuote = famousData[Math.floor(Math.random() * 1000)].text;
-     quotesDiv.innerText = `"${randomQuote}"`;
+     //randomQuote = famousData[Math.floor(Math.random() * 1000)].text;
+     randomQuote = famousData[Math.floor(Math.random() * 1000)];
+     randomQuoteText = randomQuote.text;
+     randomQuoteAuthor = randomQuote.author;
+     quotesDiv.innerText = `"${randomQuoteText}"`;
      quotesDiv.setAttribute("id", "no");
     });
 }
