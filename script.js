@@ -12,11 +12,13 @@ function getAnswer(data) {
 
   if (actualAnswer == answer) {
     console.log("win");
-    result.innerText = "You got that one right!";
+    result.innerText = "You got that one right! Try this one";
+    result.style.color = "green";
     
   } else {
     console.log("lose");
-    result.innerText = "You got that one wrong";
+    result.innerText = "You got that one wrong, try again";
+    result.style.color = "red";
   }
 
   randomFunc[Math.floor(Math.random() * randomFunc.length)]();
@@ -40,7 +42,7 @@ function getKayneQuote() {
     .then((response) => response.json())
     .then((kanyeData) => {
       console.log(kanyeData.quote);
-      quotesDiv.innerText = kanyeData.quote;
+      quotesDiv.innerText = `"${kanyeData.quote}"`;
       quotesDiv.setAttribute("id", "yes");
     });
 }
@@ -49,8 +51,9 @@ function getFamousQuote() {
   fetch("https://type.fit/api/quotes")
     .then((response) => response.json())
     .then((famousData) => {
-     quotesDiv.innerText = famousData[Math.floor(Math.random() * 1000)].author;
-     //quotesDiv.innerText = famousData[Math.floor(Math.random() * 1000)].text;
+     //quotesDiv.innerText = famousData[Math.floor(Math.random() * 1000)].author;
+     randomQuote = famousData[Math.floor(Math.random() * 1000)].text;
+     quotesDiv.innerText = `"${randomQuote}"`;
      quotesDiv.setAttribute("id", "no");
     });
 }
