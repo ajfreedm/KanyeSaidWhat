@@ -40,7 +40,7 @@
     
 ### Post-MVP: 
     
-    - Kanye guru score guauge
+    - Adding a link to the Wikipedia page of the famous person if the person if the Quote is not Kanyes.
     
 ### Goals:
     

@@ -17,7 +17,7 @@ function getAnswer(data) {
     
   } else {
     console.log("lose");
-    result.innerHTML = `You got that one wrong, try again <span style="text-decoration: underline;"><a href="https://en.wikipedia.org/wiki/Special:Search?search=${randomQuoteAuthor}">${randomQuoteAuthor}</a></span> said that` ;
+    result.innerHTML = `You got that one wrong, try again <span style="text-decoration: underline;"><a href="https://en.wikipedia.org/wiki/Special:Search?search=${randomQuoteAuthor}" target="_blank" >${randomQuoteAuthor}</a></span> said ${randomQuoteText}` ;
     result.style.color = "red";
   }
 
