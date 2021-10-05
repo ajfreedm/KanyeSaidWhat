@@ -12,11 +12,11 @@ function getAnswer(data) {
   if (actualAnswer == answer) {
     console.log("win");
     result.innerText = "You got that one right! Try this one";
-    result.style.color = "green";
+    result.style.color = "#258749";
   } else {
     console.log("lose");
-    result.innerHTML = `You got that one wrong, try again <span style="text-decoration: underline;"><a href="https://en.wikipedia.org/wiki/Special:Search?search=${randomQuoteAuthor}" target="_blank" >${randomQuoteAuthor}</a></span> said ${randomQuoteText}`;
-    result.style.color = "red";
+    result.innerHTML = `You got that one wrong, try again <span><a style="color:#258749; text-decoration: underline;" href="https://en.wikipedia.org/wiki/Special:Search?search=${randomQuoteAuthor}" target="_blank" >${randomQuoteAuthor}</a></span> said ${randomQuoteText}`;
+    result.style.color = "#D23232";
   }
 
   randomFunc[Math.floor(Math.random() * randomFunc.length)]();

@@ -8,6 +8,7 @@ main {
 }
 
 section#quotes-wrapper {
+    color: #494949;
 }
 
 section#result-wrapper {
@@ -40,7 +41,7 @@ section#button-wrapper input:hover {
 }
 
 footer {
-  background-color: #000033;
+  background-color: #494949;
   overflow: hidden;
   color: #ffffff;
   text-align: center;
