@@ -2,7 +2,6 @@ document.querySelector("#yes").addEventListener("click", getAnswer);
 document.querySelector("#no").addEventListener("click", getAnswer);
 
 function getAnswer(data) {
-
   // this is the users answer that is taken from the data attribute contained in the input buttons
   answer = data.currentTarget.getAttribute("data-answer");
   console.log(answer);
@@ -11,23 +10,21 @@ function getAnswer(data) {
   let actualAnswer = document.querySelector(".answer").id;
 
 
-  // this conditional compares the the users answer 
+
+//rewrite this section to take 4 conditions
+//  actual answer is yes and users answer is yes  - that is correct(display correct)
+//  actual answer is yes and users answer is no - that is incorrect (display incorrect with correct author)
+//  actual answer is no and users answer is yes - that is correct (display correct)
+
+  // this conditional compares the the users answer
   if (actualAnswer == answer) {
     console.log("win");
     result.innerText = "You got that one right! Try this one";
     result.style.color = "#258749";
-  } else if (actualAnswer != answer && typeof randomQuoteAuthor === 'undefined') {
-    console.log("fix");
-    result.innerText = "You got that one right! Try this one";
-    result.style.color = "#258749";
-    let randomQuoteAuthor = undefined;
-  }
-  
-  else {
+  } else {
     console.log("lose");
     result.innerHTML = `You got that one wrong, try again <span><a style="color:#258749; text-decoration: underline;" href="https://en.wikipedia.org/wiki/Special:Search?search=${randomQuoteAuthor}" target="_blank" >${randomQuoteAuthor}</a></span> said ${randomQuoteText}`;
     result.style.color = "#D23232";
-    
   }
 
   // fire function for next quotesDiv that was set when either of the quote functions are called
@@ -50,8 +47,6 @@ function getKayneQuote() {
     .then((response) => response.json())
     .then((kanyeData) => {
       quotesDiv.innerText = `"${kanyeData.quote}"`;
-     
-     
       quotesDiv.setAttribute("id", "yes");
 
       // console debugging
