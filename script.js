@@ -1,88 +1,79 @@
-const quotesDiv = document.querySelector("#quotesDiv");
-const result = document.getElementById("result");
-
-// referenced https://stackoverflow.com/questions/65117741/how-do-i-call-a-random-function-on-button-click for solution to randomize the query functions
-const randomFunc = [getKayneQuote, getFamousQuote];
-
-
-
-
+document.querySelector("#yes").addEventListener("click", getAnswer);
+document.querySelector("#no").addEventListener("click", getAnswer);
 
 function getAnswer(data) {
+
+  // this is the users answer that is taken from the data attribute contained in the input buttons
   answer = data.currentTarget.getAttribute("data-answer");
   console.log(answer);
+
+  // this takes the true answer from the answer set by the query functions to the div id attribute
   let actualAnswer = document.querySelector(".answer").id;
 
+
+  // this conditional compares the the users answer 
   if (actualAnswer == answer) {
     console.log("win");
     result.innerText = "You got that one right! Try this one";
     result.style.color = "#258749";
-  } else {
-
-
- // else {
-    
-  //   if () {
-  //     console.log("lose");
-  //     result.innerHTML = `You got that one wrong, try again `;
-  //     result.style.color = "#D23232";
-  //   } else {
-  //     console.log("lose");
-  //     result.innerHTML = `You got that one wrong, try again <span><a style="color:#258749; text-decoration: underline;" href="https://en.wikipedia.org/wiki/Special:Search?search=${randomQuoteAuthor}" target="_blank" >${randomQuoteAuthor}</a></span> said ${randomQuoteText}`;
-  //     result.style.color = "#D23232";
-  //   }
-
+  } else if (actualAnswer != answer && typeof randomQuoteAuthor === 'undefined') {
+    console.log("fix");
+    result.innerText = "You got that one right! Try this one";
+    result.style.color = "#258749";
+    let randomQuoteAuthor = undefined;
+  }
+  
+  else {
     console.log("lose");
     result.innerHTML = `You got that one wrong, try again <span><a style="color:#258749; text-decoration: underline;" href="https://en.wikipedia.org/wiki/Special:Search?search=${randomQuoteAuthor}" target="_blank" >${randomQuoteAuthor}</a></span> said ${randomQuoteText}`;
     result.style.color = "#D23232";
+    
   }
 
-
-
-
-
-
-
-
+  // fire function for next quotesDiv that was set when either of the quote functions are called
   randomFunc[Math.floor(Math.random() * randomFunc.length)]();
 }
 
-
-
-// referenced https://stackoverflow.com/questions/65117741/how-do-i-call-a-random-function-on-button-click for solution to randomize the query functions
+// fire function on page load to fetch initial quote
+const randomFunc = [getKayneQuote, getFamousQuote];
 randomFunc[Math.floor(Math.random() * randomFunc.length)]();
 
-// I removed this so the page loads pre populated with the quote.
-// document.querySelector("#getQuote").addEventListener("click", function () {
-//   randomFunc[Math.floor(Math.random() * randomFunc.length)]();
-// });
+// this is where the query function set a yes or no value depending on if it's a Kanye quote
+const quotesDiv = document.querySelector("#quotesDiv");
 
+// this is the element where the users result is output
+const result = document.getElementById("result");
+
+// get Kanye quote function
 function getKayneQuote() {
   fetch("https://api.kanye.rest")
     .then((response) => response.json())
     .then((kanyeData) => {
       quotesDiv.innerText = `"${kanyeData.quote}"`;
+     
+     
       quotesDiv.setAttribute("id", "yes");
 
-      //
+      // console debugging
       KayneQuoteAuthor = "Kayne";
+      kanyeQuoteText = `"${kanyeData.quote}"`;
       console.log(KayneQuoteAuthor);
-
+      console.log(kanyeQuoteText);
     });
 }
 
+// get random famous quote function
 function getFamousQuote() {
   fetch("https://type.fit/api/quotes")
     .then((response) => response.json())
     .then((famousData) => {
-      //quotesDiv.innerText = famousData[Math.floor(Math.random() * 1000)].author;
-      //randomQuote = famousData[Math.floor(Math.random() * 1000)].text;
       randomQuote = famousData[Math.floor(Math.random() * 1000)];
       randomQuoteText = randomQuote.text;
       randomQuoteAuthor = randomQuote.author;
       quotesDiv.innerText = `"${randomQuoteText}"`;
       quotesDiv.setAttribute("id", "no");
 
+      // console debugging
       console.log(randomQuoteAuthor);
       console.log(randomQuoteText);
     });
