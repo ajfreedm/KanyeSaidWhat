@@ -9,24 +9,33 @@ function getAnswer(data) {
   // this takes the true answer from the answer set by the query functions to the div id attribute
   let actualAnswer = document.querySelector(".answer").id;
 
+  // rewrite this section to take 4 conditions
+  //  actual answer is yes and users answer is yes - that is correct(display correct)
+  //  actual answer is yes and users answer is no - that is incorrect (display incorrect) 
+  //  actual answer is no and users answer is yes - that is incorrect (display correct) -> (display wiki)
+  //  actual answer is no and users answer is no - that is correct (display correct) 
 
-
-//rewrite this section to take 4 conditions
-//  actual answer is yes and users answer is yes  - that is correct(display correct)
-//  actual answer is yes and users answer is no - that is incorrect (display incorrect with correct author)
-//  actual answer is no and users answer is yes - that is correct (display correct)
+  // attempting fix
+  // quotesDiv.setAttribute("author", "kayne");
 
   // this conditional compares the the users answer
-  if (actualAnswer == answer) {
+  if (actualAnswer === "yes" && answer === "yes") {
     console.log("win");
     result.innerText = "You got that one right! Try this one";
     result.style.color = "#258749";
-  } else {
+  } else if (actualAnswer === "yes" && answer === "no") {
+    console.log("lose");
+    result.innerHTML = "You got that one wrong, try again";
+    result.style.color = "#D23232";
+  } else if (actualAnswer === "no" && answer === "yes") {
     console.log("lose");
     result.innerHTML = `You got that one wrong, try again <span><a style="color:#258749; text-decoration: underline;" href="https://en.wikipedia.org/wiki/Special:Search?search=${randomQuoteAuthor}" target="_blank" >${randomQuoteAuthor}</a></span> said ${randomQuoteText}`;
     result.style.color = "#D23232";
-  }
-
+  } else if (actualAnswer === "no" && answer === "no") {
+    result.innerText = "You got that one right! Try this one";
+    result.style.color = "#258749";
+  } 
+  // END OF GET ANSWER FUNCTION
   // fire function for next quotesDiv that was set when either of the quote functions are called
   randomFunc[Math.floor(Math.random() * randomFunc.length)]();
 }
