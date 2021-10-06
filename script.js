@@ -40,6 +40,11 @@ function getKayneQuote() {
       console.log(kanyeData.quote);
       quotesDiv.innerText = `"${kanyeData.quote}"`;
       quotesDiv.setAttribute("id", "yes");
+
+      // debugging
+      KayneQuoteAuthor = "kanye";
+      console.log(KayneQuoteAuthor );
+
     });
 }
 
@@ -53,6 +58,9 @@ function getFamousQuote() {
       randomQuoteText = randomQuote.text;
       randomQuoteAuthor = randomQuote.author;
       quotesDiv.innerText = `"${randomQuoteText}"`;
+      
+      //debugging
       quotesDiv.setAttribute("id", "no");
+      console.log(randomQuoteAuthor);
     });
 }
