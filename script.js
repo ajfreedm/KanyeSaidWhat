@@ -4,6 +4,10 @@ const result = document.getElementById("result");
 // referenced https://stackoverflow.com/questions/65117741/how-do-i-call-a-random-function-on-button-click for solution to randomize the query functions
 const randomFunc = [getKayneQuote, getFamousQuote];
 
+
+
+
+
 function getAnswer(data) {
   answer = data.currentTarget.getAttribute("data-answer");
   console.log(answer);
@@ -14,16 +18,36 @@ function getAnswer(data) {
     result.innerText = "You got that one right! Try this one";
     result.style.color = "#258749";
   } else {
+
+
+ // else {
+    
+  //   if () {
+  //     console.log("lose");
+  //     result.innerHTML = `You got that one wrong, try again `;
+  //     result.style.color = "#D23232";
+  //   } else {
+  //     console.log("lose");
+  //     result.innerHTML = `You got that one wrong, try again <span><a style="color:#258749; text-decoration: underline;" href="https://en.wikipedia.org/wiki/Special:Search?search=${randomQuoteAuthor}" target="_blank" >${randomQuoteAuthor}</a></span> said ${randomQuoteText}`;
+  //     result.style.color = "#D23232";
+  //   }
+
     console.log("lose");
     result.innerHTML = `You got that one wrong, try again <span><a style="color:#258749; text-decoration: underline;" href="https://en.wikipedia.org/wiki/Special:Search?search=${randomQuoteAuthor}" target="_blank" >${randomQuoteAuthor}</a></span> said ${randomQuoteText}`;
     result.style.color = "#D23232";
   }
 
+
+
+
+
+
+
+
   randomFunc[Math.floor(Math.random() * randomFunc.length)]();
 }
 
-document.querySelector("#yes").addEventListener("click", getAnswer);
-document.querySelector("#no").addEventListener("click", getAnswer);
+
 
 // referenced https://stackoverflow.com/questions/65117741/how-do-i-call-a-random-function-on-button-click for solution to randomize the query functions
 randomFunc[Math.floor(Math.random() * randomFunc.length)]();
@@ -37,13 +61,12 @@ function getKayneQuote() {
   fetch("https://api.kanye.rest")
     .then((response) => response.json())
     .then((kanyeData) => {
-      console.log(kanyeData.quote);
       quotesDiv.innerText = `"${kanyeData.quote}"`;
       quotesDiv.setAttribute("id", "yes");
 
-      // debugging
-      KayneQuoteAuthor = "kanye";
-      console.log(KayneQuoteAuthor );
+      //
+      KayneQuoteAuthor = "Kayne";
+      console.log(KayneQuoteAuthor);
 
     });
 }
@@ -58,9 +81,9 @@ function getFamousQuote() {
       randomQuoteText = randomQuote.text;
       randomQuoteAuthor = randomQuote.author;
       quotesDiv.innerText = `"${randomQuoteText}"`;
-      
-      //debugging
       quotesDiv.setAttribute("id", "no");
+
       console.log(randomQuoteAuthor);
+      console.log(randomQuoteText);
     });
 }
