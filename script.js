@@ -11,9 +11,9 @@ function getAnswer(data) {
 
   // rewrite this section to take 4 conditions
   //  actual answer is yes and users answer is yes - that is correct(display correct)
-  //  actual answer is yes and users answer is no - that is incorrect (display incorrect) 
+  //  actual answer is yes and users answer is no - that is incorrect (display incorrect)
   //  actual answer is no and users answer is yes - that is incorrect (display correct) -> (display wiki)
-  //  actual answer is no and users answer is no - that is correct (display correct) 
+  //  actual answer is no and users answer is no - that is correct (display correct)
 
   // attempting fix
   // quotesDiv.setAttribute("author", "kayne");
@@ -34,7 +34,7 @@ function getAnswer(data) {
   } else if (actualAnswer === "no" && answer === "no") {
     result.innerText = "You got that one right! Try this one";
     result.style.color = "#258749";
-  } 
+  }
   // END OF GET ANSWER FUNCTION
   // fire function for next quotesDiv that was set when either of the quote functions are called
   randomFunc[Math.floor(Math.random() * randomFunc.length)]();

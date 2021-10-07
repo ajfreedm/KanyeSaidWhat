@@ -1,14 +1,14 @@
 # KanyeSaidWhat
 
-### App Title: 
+### KanyeSaidWhat: 
     
-    KayneSaidWhat
+    https://ajfreedm.github.io/KanyeSaidWhat/
     
 ### App Description:
    
     The app will display a randomized quote taken either from kanye.rest API from the famous quote API. The end user will have to answer the question using a button if they think the quote is from Kayne West or a some other famous person.
     
-### API: 
+### API's Used: 
     
    Kayne.rest API: https://kanye.rest/
    Famous Quotes API: https://type.fit/api/quotes
