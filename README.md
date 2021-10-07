@@ -1,8 +1,8 @@
 # KanyeSaidWhat
 
 ### KanyeSaidWhat: 
-    
-    https://ajfreedm.github.io/KanyeSaidWhat/
+[Live deployed site] (https://ajfreedm.github.io/KanyeSaidWhat/)    
+  
     
 ### App Description:
    
