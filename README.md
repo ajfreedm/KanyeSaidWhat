@@ -1,7 +1,7 @@
 # KanyeSaidWhat
 
 ### KanyeSaidWhat: 
-[Live deployed site] (https://ajfreedm.github.io/KanyeSaidWhat/)    
+<https://ajfreedm.github.io/KanyeSaidWhat/>    
   
     
 ### App Description:
@@ -30,7 +30,7 @@
  ```
    
 ### Wireframes:
-[Wireframe] (https://www.figma.com/file/P6JKDp5DQmXtHlwuGyfTKi/Untitled?node-id=0%3A1) 
+<https://www.figma.com/file/P6JKDp5DQmXtHlwuGyfTKi/Untitled?node-id=0%3A1> 
     
 ### MVP:
     - Display a random quote to the end user
