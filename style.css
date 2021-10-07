@@ -8,7 +8,7 @@ main {
 }
 
 section#quotes-wrapper {
-    color: #494949;
+  color: #494949;
 }
 
 section#result-wrapper {
@@ -46,14 +46,44 @@ footer {
   overflow: hidden;
   color: #ffffff;
   text-align: center;
-  height: 50px;
+  height: 70px;
   font-size: 20px;
   padding-top: 20px;
 }
 
+footer #social-media .icon-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: auto;
+  width: auto;
+}
+
+footer #social-media .icon-list li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer #social-media a.icon {
+  font-size: 20px;
+  line-height: 20px;
+  padding: 10px;
+  background: #494949;
+  color: #fff;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+footer #social-media a.icon:hover {
+  background: #7c7c7c;
+}
 
 @media only screen and (max-width: 600px) {
-    main {
-        font-size: 30px;
-      }
+  main {
+    font-size: 30px;
   }
+}
