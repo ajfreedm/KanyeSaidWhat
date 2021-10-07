@@ -2,7 +2,7 @@
 
 ### KanyeSaidWhat: 
     
-    [https://ajfreedm.github.io/KanyeSaidWhat/](https://ajfreedm.github.io/KanyeSaidWhat/)
+    https://ajfreedm.github.io/KanyeSaidWhat/
     
 ### App Description:
    
