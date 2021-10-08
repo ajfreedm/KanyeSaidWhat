@@ -42,6 +42,18 @@
     
     - Adding a link to the Wikipedia page of the famous person if the person if the Quote is not Kanyes.
     
+### Project Schedule
+
+| Day     | Deliverable          | Status  |
+| ------------- |:-------------:| -----:|
+| October 1      | Brainstorming and Wireframe  | Complete |
+| October 1      | Poject Pitch and Approval  | Complete |
+| October 4      | HTML Structure      |   Complete |
+| October 5      | Javascript  | Complete |
+| October 6      | debugging      |   Complete |
+| October 7      | Flexbox / Media Queries      |    Complete | 
+
+
 ### Goals:
     
     I first plan on building on rough website. Second I will fetch the API data and manipulate the DOM accordingly.
