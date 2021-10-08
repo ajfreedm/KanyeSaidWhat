@@ -86,4 +86,9 @@ footer #social-media a.icon:hover {
   main {
     font-size: 30px;
   }
+
+  section#button-wrapper input {
+    margin-bottom: 20px;
+  }
+
 }
