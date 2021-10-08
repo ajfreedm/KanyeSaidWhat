@@ -45,3 +45,16 @@
 ### Goals:
     
     I first plan on building on rough website. Second I will fetch the API data and manipulate the DOM accordingly.
+
+### Timeframes
+| Component        | Time Spent       
+| ------------- |:-------------:| 
+| Pseudocode Javascript      | 2hr | 
+| Javascript Code      | 8hr      |  
+| Debugging with Console Log | 6hr      |  
+| HTML Stucture      | 6hr | 
+| DOM Manipulation      | 6hr      |  
+| CSS Styling | 3hr      |
+| Media Queries | 1hr      |  
+| Flexbox Implimentation      | 3hr | 
+| Total      | 35hr      |    
